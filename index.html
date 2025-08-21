@@ -4,12 +4,189 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FS_Exp1</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf6ec; /* soft beige */
+      color: #4b3832;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fbe8d3; /* peach skin tone */
+      color: #4b3832;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #3e2723; /* deep brown */
+    }
+
+    header h4 {
+      margin-top: 0.5rem;
+      font-weight: normal;
+      font-size: 1rem;
+      color: #795548;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #f5d7b5; /* warm beige */
+      padding: 0.8rem;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #4b3832;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #b45f06; /* warm brown hover */
+    }
+
+    main, section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h1, section h2 {
+      color: #b45f06;
+      border-bottom: 2px solid #f0a868;
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+    }
+
+    /* About */
+    #about p {
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    /* Skills */
+    #skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #skills li {
+      background: #fff3e6;
+      margin: 0.4rem 0;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border-left: 5px solid #f0a868;
+    }
+
+    /* Education Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table, th, td {
+      border: 1px solid #e6ccb2;
+    }
+
+    th {
+      background: #b45f06;
+      color: white;
+      padding: 0.8rem;
+    }
+
+    td {
+      padding: 0.8rem;
+      text-align: center;
+      background: #fffdf9;
+    }
+
+    /* Activities */
+    #activities ul {
+      list-style-type: square;
+      margin-left: 1.5rem;
+    }
+
+    /* Projects */
+    .project-box {
+      background: #fff3e6;
+      border: 1px solid #e6ccb2;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
+    .project-box h3 {
+      margin-top: 0;
+      color: #6d4c41;
+    }
+
+    /* Achievements */
+    #achievements ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-info a {
+      color: #4b3832;
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #b45f06;
+    }
+
+    .contact-info i {
+      margin-right: 6px;
+      color: #b45f06;
+    }
+
+    /* Footer */
+    footer {
+      background: #fbe8d3;
+      color: #4b3832;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-top: 1px solid #e6ccb2;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Tanisha Kumari</h1>
     <h4>Full Stack Developer | Student | B.E. CSE | 3rd year</h4>
-    <hr>
   </header>
   <main>
     <nav>
@@ -17,13 +194,12 @@
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#achievements">Achievements</a>
     </nav>
-    <hr>
   </main>
     <section>
       <h1 id="about">About Me</h1>
-      <p>Hi! I am Tanisha Kumari, currently pursuing Bachelors in Computer Science and Engineering at Chandigarh University. I am passionate about coding and web development.I am a BE (CSE) student with knowledge of C++, Data Structures, and Web Development. 
+      <p>Hi! I am Tanisha Kumari, currently pursuing Bachelors in Computer Science and Engineering at Chandigarh University. I am passionate about coding and web development. I am a BE (CSE) student with knowledge of C++, Data Structures, and Web Development. 
         I enjoy solving problems and building projects, and I am looking for opportunities to apply my skills.
       </p>
     </section>
@@ -39,7 +215,7 @@
     </section>
     <section>
       <h1 id="education">Education</h1>
-      <table border="1px">
+      <table>
         <tr>
           <th>Degree</th>
           <th>Institution</th>
@@ -50,7 +226,7 @@
           <td>B.E. CSE</td>
           <td>Chandigarh University, Mohali</td>
           <td>2023-2027</td>
-          <td>9.14(present)</td>
+          <td>9.14 (present)</td>
         </tr>
         <tr>
           <td>Intermediate</td>
@@ -76,29 +252,38 @@
     </section>
     <section>
       <h1 id="projects">Projects</h1>
-      <ol type="1">
-        <li><strong>Expense Tracker System</strong></li>
-        <p>A Full Stack website using MERN Stack.</p>
-        <li>
-          <strong>Portfolio Website</strong></li>
-          <p>A personal portfolio website to showcase my skills and projects.</p>
-        </li>
-      </ol>
+      <div class="project-box">
+        <h3>Expense Tracker System</h3>
+        <p>A Full Stack website using MERN Stack that allows users to manage daily expenses, visualize spending patterns, and set savings goals.</p>
+      </div>
+      <div class="project-box">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website to showcase my skills and projects with responsive design and clean UI.</p>
+      </div>
+      <div class="project-box">
+        <h3>Hotel Reservation System</h3>
+        <p>A web-based platform for booking hotels with features like user authentication, admin dashboard, Stripe payment gateway integration, and real-time room availability. 
+        Built using <strong>React (frontend)</strong> and <strong>PHP/MySQL (backend)</strong>.</p>
+      </div>
     </section>
-    <section>
-      <h1 id="contact">Contact</h1>
-      <form action="#">
-        <label for="/name">Name</label> <br>
-        <input type="name" name="name" id="/name"> <br> <br>
-        <label for="/email">Email</label> <br>
-        <input type="email" name="email" id="/email"> <br> <br>
-        <label for="/feedback">Enter your feedback here</label> <br>
-        <textarea name="feedback" id="/feedback" rows="10" cols="35"></textarea>
-      </form>
-      <hr>
+    <section id="achievements">
+      <h1>Achievements</h1>
+      <ul>
+        <li>Secured 1st position in inter-college olympiad competition</li>
+        <li>Won a prize in a <strong>hackathon</strong> for building an innovative online booking solution.</li>
+        <li>Participated in <strong>debates and group discussions</strong>, enhancing communication and leadership skills.</li>
+        <li>Consistently scored above <strong>90% in academics</strong> (Intermediate 90.04%, Matriculation 96%).</li>
+        <li>Built and deployed full stack applications</li>
+      </ul>
+      <div class="contact-info">
+        <a href="https://www.linkedin.com/in/tanisha-kumari-23003928b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/tanishaKashyap" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:tanishaKashyap@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="tel:+918969810040"><i class="fas fa-phone"></i> +91 8969810040</a>
+      </div>
     </section>
   <footer>
-    <p>All rights reserved &copy Charu Singla.</p>
+    <p>All rights reserved &copy; Tanisha Kumari.</p>
   </footer>
 </body>
 </html>
