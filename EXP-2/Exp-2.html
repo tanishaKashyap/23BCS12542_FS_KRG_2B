@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .filter-section {
+      margin-bottom: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+      background: #fdfdfd;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0;
+      font-weight: bold;
+      color: #007b5e;
+    }
+    .empty-message {
+      color: red;
+      font-style: italic;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Product Filter</h2>
+  
+  <!-- Filter Dropdown -->
+  <div class="filter-section">
+    <label for="category">Filter by Category: </label>
+    <select id="category">
+      <option value="all">All</option>
+      <option value="gadgets">Gadgets</option>
+      <option value="fashion">Fashion</option>
+      <option value="stationery">Stationery</option>
+    </select>
+  </div>
+
+  <!-- Products Display -->
+  <div class="products" id="products"></div>
+  <div class="empty-message" id="emptyMsg"></div>
+
+  <script>
+    // product dataset
+    const products = [
+      { name: "Smartphone", price: 18999, category: "gadgets" },
+      { name: "Smartwatch", price: 4999, category: "gadgets" },
+      { name: "Sneakers", price: 2499, category: "fashion" },
+      { name: "Backpack", price: 1599, category: "fashion" },
+      { name: "Notebook", price: 60, category: "stationery" }
+    ];
+
+    const dropdown = document.querySelector("#category");
+    const productContainer = document.querySelector("#products");
+    const emptyMessage = document.querySelector("#emptyMsg");
+
+    // show products
+    function renderProducts(items) {
+      productContainer.innerHTML = "";
+      emptyMessage.textContent = "";
+      if (items.length === 0) {
+        emptyMessage.textContent = "No products available in this category.";
+        return;
+      }
+      items.forEach(product => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `<h3>${product.name}</h3><p>₹${product.price}</p>`;
+        productContainer.appendChild(card);
+      });
+    }
+
+    // filter by category
+    function filterProducts() {
+      const selectedCategory = dropdown.value;
+      const filtered = selectedCategory === "all" ? products : products.filter(item => item.category === selectedCategory);
+      renderProducts(filtered);
+    }
+    dropdown.addEventListener("change", filterProducts);
+    // initial load
+    renderProducts(products);
+  </script>
+</body>
+</html>
