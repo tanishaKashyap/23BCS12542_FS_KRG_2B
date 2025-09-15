@@ -3,8 +3,6 @@
 ## Aim
 To implement a dynamic product filtering system that updates displayed items based on user dropdown selection using **JavaScript** and **DOM manipulation**.
 
----
-
 ## Objectives
 -  Create a product dataset  
 -  Build filter dropdown UI  
@@ -12,5 +10,4 @@ To implement a dynamic product filtering system that updates displayed items bas
 -  Dynamically update the DOM  
 -  Add visual feedback (e.g., show filtered results count)  
 
----
 
