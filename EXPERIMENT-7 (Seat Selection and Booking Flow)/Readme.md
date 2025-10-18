@@ -27,5 +27,3 @@ Module 3 handles the **seat selection and booking flow** for a movie ticket book
      - A **ticket** is generated with all relevant details (movie, date, time, seats, total amount).
    - Users can view and download their ticket.
 
-## Folder Structure
-
