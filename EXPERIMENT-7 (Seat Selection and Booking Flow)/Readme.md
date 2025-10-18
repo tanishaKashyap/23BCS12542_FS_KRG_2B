@@ -3,8 +3,6 @@
 ## Overview
 Module 3 handles the **seat selection and booking flow** for a movie ticket booking system. It provides users with a seamless interface to select shows, choose seats, confirm bookings, and make payments.
 
----
-
 ## Features
 
 1. **Show Selection**
@@ -28,8 +26,6 @@ Module 3 handles the **seat selection and booking flow** for a movie ticket book
      - The system generates a **unique booking ID**.
      - A **ticket** is generated with all relevant details (movie, date, time, seats, total amount).
    - Users can view and download their ticket.
-
----
 
 ## Folder Structure
 
