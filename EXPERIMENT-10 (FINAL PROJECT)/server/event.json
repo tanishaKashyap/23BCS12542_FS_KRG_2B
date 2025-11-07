@@ -1,0 +1,11 @@
+{
+  "id": "123",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email_addresses": [
+    {
+      "email_address": "john@example.com"
+    }
+  ],
+  "image_url": "https://example.com/avatar.jpg"
+}
