@@ -27,4 +27,3 @@ Module 4 handles the **administrative management** of the CineNext movie booking
    - Generate reports on sales, bookings, and revenue.
    - Export data for external analysis.
 
-## Folder Structure
